@@ -3,7 +3,7 @@ import { fn } from 'storybook/test';
 import { Alert } from './Alert';
 
 export default {
-  title: 'Example/Alert',
+  title: 'React-Storylab/Alert',
   component: Alert,
   parameters: {
     layout: 'centered',

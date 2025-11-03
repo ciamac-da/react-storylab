@@ -3,7 +3,7 @@ import { expect, userEvent, within } from 'storybook/test';
 import { Page } from './Page';
 
 export default {
-  title: 'Example/Page',
+  title: 'React-Storylab/Page',
   component: Page,
   parameters: {
     layout: 'fullscreen',

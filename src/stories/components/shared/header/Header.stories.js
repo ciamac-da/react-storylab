@@ -3,7 +3,7 @@ import { fn } from 'storybook/test';
 import { Header } from './Header';
 
 export default {
-  title: 'Example/Header',
+  title: 'React-Storylab/Header',
   component: Header,
   tags: ['autodocs'],
   parameters: {
