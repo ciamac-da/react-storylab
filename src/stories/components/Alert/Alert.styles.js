@@ -1,33 +1,33 @@
-import styled, { css }  from 'styled-components';
+import styled, { css } from 'styled-components'
 
-
-const typeStyles = {
-  success: css`
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
+const variantStyles = {
+  success: ({ theme }) => css`
+    background-color: ${theme.colors.successBg};
+    border-color: ${theme.colors.successBorder};
+    color: ${theme.colors.successText};
   `,
-  error: css`
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
+  error: ({ theme }) => css`
+    background-color: ${theme.colors.errorBg};
+    border-color: ${theme.colors.errorBorder};
+    color: ${theme.colors.errorText};
   `,
-  warning: css`
-    background-color: #fff3cd;
-    border-color: #ffeeba;
-    color: #856404;
+  warning: ({ theme }) => css`
+    background-color: ${theme.colors.warningBg};
+    border-color: ${theme.colors.warningBorder};
+    color: ${theme.colors.warningText};
   `,
-  info: css`
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
-    color: #0c5460;
+  info: ({ theme }) => css`
+    background-color: ${theme.colors.infoBg};
+    border-color: ${theme.colors.infoBorder};
+    color: ${theme.colors.infoText};
   `,
-};
+}
 
 export const AlertContainer = styled.div`
   padding: 16px;
   border: 1px solid transparent;
   border-radius: 4px;
   margin: 16px 0;
-  ${(props) => typeStyles[props.type || 'info']}
-`;
+
+  ${({ $variant = 'info', theme }) => variantStyles[$variant]({ theme })}
+`
